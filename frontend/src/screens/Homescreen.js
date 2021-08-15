@@ -7,11 +7,11 @@ const Homescreen = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchproducts = async () => {
+    const fetchProducts = async () => {
       const { data } = await axios.get("/api/products");
       setProducts(data);
     };
-    fetchproducts();
+    fetchProducts();
   }, []);
 
   return (
